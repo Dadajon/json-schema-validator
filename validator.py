@@ -1,10 +1,11 @@
-import json
-import jsonschema
-from jsonschema import validate, ValidationError, SchemaError
-import os
 import argparse
-from icecream import ic
 import csv
+import json
+import os
+
+import jsonschema
+from icecream import ic
+from jsonschema import validate
 
 
 def get_schema():
@@ -18,6 +19,8 @@ def validate_json(json_data):
     try:
         validate(instance=json_data, schema=execute_api_schema)
     except jsonschema.exceptions.ValidationError as err:
+        ic(err)
+        print(type(err))
         return False, err
     message = "Given JSON data is Valid"
     return True, message
@@ -42,15 +45,14 @@ def is_valid(dir_path):
                         valid_cnt += 1
                     else:
                         print(f"{files} : {message}")
-                        writer.writerow(
-                            [folder, files, message])
-    return valid_cnt/total
+                        writer.writerow([folder, files, message])
+        writer.writerow(
+            ["", "Score", f"{valid_cnt}/{total}={valid_cnt / total}"])
 
-    
+
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("--dir_path", type=str)
     args = parser.parse_args()
 
-    validation_scrore = is_valid(args.dir_path)
-    ic(validation_scrore)
+    is_valid(args.dir_path)
