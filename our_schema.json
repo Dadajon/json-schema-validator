@@ -1,0 +1,56 @@
+{
+    "type": "object",
+    "properties": {
+        "imagedata": {
+            "type": "object",
+            "properties": {
+                "width": { "type": "integer" },
+                "height": { "type": "integer" },
+                "filename": { "type": "string" }
+            },
+            "required": [
+                "width",
+                "height",
+                "filename"
+            ]
+        },
+        "metadata": {
+            "type": "object",
+            "properties": {
+                "kind": { "type": "string" },
+                "part": { "type": "string" },
+                "gps_long": { "type": "null" },
+                "gps_lat": { "type": "null" },
+                "place": { "type": "null" },
+                "is_copyright": { "type": "boolean" },
+                "is_compare": { "type": "boolean" },
+                "is_poisonous": { "type": "boolean" }
+            },
+            "required": [
+                "kind",
+                "part",
+                "is_copyright",
+                "is_compare",
+                "is_poisonous"
+            ]
+        },
+        "exif": {
+            "manufacturer": { "type": "string" },
+            "model": { "type": "string" },
+            "flash": { "type": "boolean" },
+            "focal_length": { "type": "string" },
+            "exposure_time": { "type": "string" },
+            "ISO": { "type": "string" },
+            "resolution": { "type": "string" },
+            "f_number": { "type": "string" },
+            "aperture_value": { "type": "string" },
+            "depth": { "type": "integer" },
+            "bit": { "type": "integer" }
+        },
+        "tag": { "type": "array" }
+    },
+    "required": [
+        "imagedata",
+        "metadata"
+    ]
+}

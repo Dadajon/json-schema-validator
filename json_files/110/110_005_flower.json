@@ -1,0 +1,32 @@
+{
+    "imagedata": {
+        "width": 500,
+        "height": 346,
+        "filename": "110_005_flower.jpg"
+    },
+    "metadata": {
+        "kind": "110",
+        "part": "flower",
+        "gps_long": null,
+        "gps_lat": null,
+        "place": null,
+        "date": "2003:04:12 14:19:57",
+        "is_copyright": true,
+        "is_compare": false,
+        "is_poisonous": false
+    },
+    "exif": {
+        "manufacturer": "FUJIFILM",
+        "model": "FinePixS1Pro",
+        "flash": false,
+        "focal_length": "64.0",
+        "exposure_time": "11.0",
+        "ISO": "320",
+        "resolution": "72.0",
+        "f_number": "5.64",
+        "aperture_value": "5.0",
+        "depth": 3,
+        "bit": 8
+    },
+    "tag": []
+}

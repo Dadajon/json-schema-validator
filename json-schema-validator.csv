@@ -1,0 +1,8 @@
+id,json_file,error message
+110,110_001_flower.json,"504.11 is not of type 'integer'
+
+Failed validating 'type' in schema['properties']['imagedata']['properties']['width']:
+    {'type': 'integer'}
+
+On instance['imagedata']['width']:
+    504.11"
