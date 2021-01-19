@@ -27,7 +27,7 @@ def is_valid(dir_path):
     total = 0
     valid_cnt = 0
 
-    with open(f'json-schema-validator.csv', 'w', newline='') as file:
+    with open(f'results.csv', 'w', newline='') as file:
         writer = csv.writer(file)
         writer.writerow(["id", "json_file", "error message"])
         for folder in sorted(os.listdir(dir_path)):
